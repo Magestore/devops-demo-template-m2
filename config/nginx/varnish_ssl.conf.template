@@ -1,6 +1,7 @@
 server {
-	listen ${NGINX_PORT} ssl;
-
+	listen ${NGINX_PORT};
+	ssl	on;
+	
 	server_name ${NGINX_HOST};
 	ssl_certificate /etc/nginx/ssl/nginx.crt;
 	ssl_certificate_key /etc/nginx/ssl/nginx.key;
