@@ -38,7 +38,7 @@ services:
       - varnish
     
   apache-php:
-    # keopx/apache-php available tags: latest, 7.2, 7.1, 7.0, 5.6.
+    # thinlt/apache-php available tags: latest, 7.2, 5.6.
     image: thinlt/apache-php:5.6
     ports:
       # 8008 works without varnish.
@@ -50,7 +50,7 @@ services:
       - mail
     volumes:
       ## Data.
-      - ./data/www:/var/www 
+      - ./data/www:/var/www
       - ./config/vhosts:/etc/apache2/sites-enabled
       ### See: https://github.com/keopx/docker-lamp for more information.
       ## php.ini for php 7.x and remove environment varibles.
