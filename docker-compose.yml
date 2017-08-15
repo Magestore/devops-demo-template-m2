@@ -80,8 +80,8 @@ services:
     image: thinlt/mysql:5.6
     ports:
       - "3307:3306"
-    #volumes:
-      #- ./data/database:/var/lib/mysql
+    volumes:
+      - ./data/database:/var/lib/mysql
       ## Custom setup for MySQL
       #- ./config/mysql/my.cnf:/etc/mysql/my.cnf
     environment:
