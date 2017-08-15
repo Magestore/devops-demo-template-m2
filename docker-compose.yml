@@ -48,9 +48,10 @@ services:
       - mysql
       - redis
       - mail
-    #volumes:
-      #- ./data/www:/var/www # Data.
-      #- ./config/vhosts:/etc/apache2/sites-enabled
+    volumes:
+      ## Data.
+      - ./data/www:/var/www 
+      - ./config/vhosts:/etc/apache2/sites-enabled
       ### See: https://github.com/keopx/docker-lamp for more information.
       ## php.ini for php 7.x and remove environment varibles.
       #- ./config/php/7.0/php.ini:/etc/php/7.0/apache2/php.ini
@@ -68,12 +69,12 @@ services:
       # - ~/.drush:/root/.drush
       ## SSH support. e.g.
       # - ~/.ssh:/root/.ssh
-    # environment:
+    environment:
       ### WARNING: Use only if you not use custom php.ini.
       ## ssmtp mail sender.
-      # - PHP_SENDMAIL_PATH="/usr/sbin/ssmtp -t"
+      - PHP_SENDMAIL_PATH="/usr/sbin/ssmtp -t"
       ## SMTP server configruation: "domain:port" | "mail" server domain is mailhog name.
-      # - PHP_SENDMAIL_DOMAIN=mail:1025
+      - PHP_SENDMAIL_DOMAIN=mail:1025
     #working_dir: /var/www
   mysql:
     image: thinlt/mysql:5.6
