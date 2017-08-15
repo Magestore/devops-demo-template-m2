@@ -78,7 +78,7 @@ services:
   mysql:
     image: thinlt/mysql:5.6
     ports:
-      - "3306:3306"
+      - "3307:3306"
     #volumes:
       #- ./data/database:/var/lib/mysql
       ## Custom setup for MySQL
