@@ -1,10 +1,6 @@
-# Native docker-based local environment for Drupal
+# Docker LAMP by Magestore
 
-Use this Docker compose file to spin up local environment for [Drupal](https://wwww.drupal.org) with a *native Docker app*
-
-This docker setup works with **Debian 9**, **Varnish 5.1/5.0/4.0**, **Apache 2.4**, **PHP 7.2/7.1/7.0/5.6**, **MySQL 8.0/5.7/5.6/5.5/** and **Redis 3.2/3.0**. This setup have **Mailhog** and **phpMyAdmin** as helper tools.
-
-This is [keopx](https://www.keopx.net) Docker **[Drupal](https://wwww.drupal.org)** optimized images for apache-php with varnish and MySQL.
+This docker setup works with **Debian 9**, **Varnish 5.1**, **Apache 2.4**, **Nginx latest**, **PHP 7.2/5.6**, **MySQL 5.6** and **Redis 3.2**. This setup have **Mailhog** and **phpMyAdmin** as helper tools.
 
 ---
 
