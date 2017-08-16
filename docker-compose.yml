@@ -20,7 +20,7 @@ services:
     links:
       - apache-php
   proxy:
-    ## use nginx for proxy server
+    ## use nginx for proxy server, install ssl here
     image: nginx
     ports:
       - "443:443"
