@@ -35,11 +35,11 @@ The [Drupal](https://wwww.drupal.org) bundle consist of the following containers
 
 | Container | Version | Service name | Image | Public Port | Enabled by default |
 | --------- | ------- | ------------ | ----- | ----------- | ------------------ |
-| [Varnish](#varnish) | [5.1](https://github.com/keopx/docker-varnish/blob/master/5.1/)/[5.0](https://github.com/keopx/docker-varnish/blob/master/5.0/)/[4.0](https://github.com/keopx/docker-varnish/blob/master/4.0/) | varnish | <a href="https://hub.docker.com/r/keopx/varnish/" target="_blank">keopx/varnish</a> | 80 | ✓ |
+| [Varnish](#varnish) | 5.1 | varnish | <a href="https://hub.docker.com/r/thinlt/varnish/" target="_blank">thinlt/varnish</a> | 80 | ✓ |
 | [Nginx](https://hub.docker.com/_/nginx/) | latest | proxy | nginx | 443 | ✓ |
-| [Apache PHP](#apache-php) | [7.2](https://github.com/keopx/docker-apache-php/blob/master/7.2/)/[7.1](https://github.com/keopx/docker-apache-php/blob/master/7.1/)/[7.0](https://github.com/keopx/docker-apache-php/blob/master/7.0/)/[5.6](https://github.com/keopx/docker-apache-php/blob/master/5.6/) | apache-php | <a href="https://hub.docker.com/r/keopx/apache-php/" target="_blank">keopx/apache-php</a> | 8008 | ✓ |
-| [MySQL](#mysql) | [8.0](https://github.com/keopx/docker-mysql/blob/master/8.0/)/[5.7](https://github.com/keopx/docker-mysql/blob/master/5.7/)/[5.6](https://github.com/keopx/docker-mysql/blob/master/5.6/)/[5.5](https://github.com/keopx/docker-mysql/blob/master/5.5/) | mysql | <a href="https://hub.docker.com/r/keopx/mysql/" target="_blank">keopx/mysql</a> | 3306 | ✓ |
-| [Redis](#redis) | [3.2](https://github.com/keopx/docker-redis/blob/master/3.2/)/[3.0](https://github.com/keopx/docker-redis/blob/master/3.0/) | redis | <a href="https://hub.docker.com/r/keopx/redis/" target="_blank">keopx/redis</a> | 6379 | ✓ |
+| [Apache PHP](#apache-php) | 7.2/5.6 | apache-php | <a href="https://hub.docker.com/r/thinlt/apache-php/" target="_blank">thinlt/apache-php</a> | 8008 | ✓ |
+| [MySQL](#mysql) | 5.6 | mysql | <a href="https://hub.docker.com/r/thinlt/mysql/" target="_blank">keopx/mysql</a> | 3306 | ✓ |
+| [Redis](#redis) | 3.2 | redis | <a href="https://hub.docker.com/r/thinlt/redis/" target="_blank">keopx/redis</a> | 6379 | ✓ |
 | [phpMyAdmin](#phpmyadmin) | | phpmyadmin | <a href="https://hub.docker.com/r/phpmyadmin/phpmyadmin" target="_blank">phpmyadmin/phpmyadmin</a> |  8080 | ✓ |
 | [Mailhog](#mailhog) | | mailhog | <a href="https://hub.docker.com/r/mailhog/mailhog" target="_blank">mailhog/mailhog</a> | 8025 - 1025 | ✓ |
 
@@ -70,40 +70,16 @@ $ docker-compose down
 #### Run bash
 
 ```bash
-docker exec -it dockerlamp_web_1 /bin/bash
+docker exec -it devopslamp_apache-php_1 /bin/bash
 ```
 
-Replace _dockerlamp_web_1_ with _name_ of: 
+Replace _devopslamp_apache-php_1_ with _name_ of: 
 
 ```bash
 docker-compose ps
 ```
 
 ## Containers
-
-### Varnish
-
-Available tags are:
-
-- 5.1, latest ([5.1/Dockerfile](https://github.com/keopx/docker-varnish/blob/master/5.1/Dockerfile))
-- 5.0 ([5.0/Dockerfile](https://github.com/keopx/docker-varnish/blob/master/5.0/Dockerfile))
-- 4.0 ([4.0/Dockerfile](https://github.com/keopx/docker-varnish/blob/master/4.0/Dockerfile))
-
-### Apache PHP
-- 7.2, latest ([7.2/Dockerfile](https://github.com/keopx/docker-apache-php/blob/master/7.2/Dockerfile))
-- 7.1 ([7.1/Dockerfile](https://github.com/keopx/docker-apache-php/blob/master/7.1/Dockerfile))
-- 7.0 ([7.0/Dockerfile](https://github.com/keopx/docker-apache-php/blob/master/7.0/Dockerfile))
-- 5.6 ([5.6/Dockerfile](https://github.com/keopx/docker-apache-php/blob/master/5.6/Dockerfile))
-
-### MySQL
-- 8.0, latest ([8.0/Dockerfile](https://github.com/keopx/docker-mysql/blob/master/8.0/Dockerfile))
-- 5.7 ([5.7/Dockerfile](https://github.com/keopx/docker-mysql/blob/master/5.7/Dockerfile))
-- 5.6 ([5.6/Dockerfile](https://github.com/keopx/docker-mysql/blob/master/5.6/Dockerfile))
-- 5.5 ([5.5/Dockerfile](https://github.com/keopx/docker-mysql/blob/master/5.6/Dockerfile))
-
-### Redis
-- 3.2, latest ([3.2/Dockerfile](https://github.com/keopx/docker-redis/blob/master/3.2/Dockerfile))
-- 3.0 ([3.0/Dockerfile](https://github.com/keopx/docker-redis/blob/master/3.0/Dockerfile))
 
 ### phpMyAdmin
 
@@ -118,16 +94,6 @@ This is a default image. Use to have easy mailsender and mail watcher to test em
 ### Varnish
 
 By default we can use a standard _default.vcl_.
-
-In addition, you can check a varnish vcl for [Drupal](https://www.drupal.org) in [drupal-base.vcl](https://github.com/keopx/docker-lamp/blob/master/config/varnish/drupal-base.vcl)
-
-#### drupal-base.vcl for Drupal
-
-You can check a special varnish vcl file for [Drupal](https://wwww.drupal.org) **drupal-base.vcl** based in [NITEMAN](https://github.com/NITEMAN) config file: [drupal-base.vcl](https://github.com/NITEMAN/varnish-bites/blob/master/varnish4/drupal-base.vcl)
-
-**Note**: drupal-base.vcl uses MIT license.
-
-If you like to add **drupal-base.vcl** add this lines. Added by default 
      
 ```yml
     volumes:
@@ -170,13 +136,13 @@ You can see _volumes_ to check existing configurations for _vhosts_. _vhosts_ vo
     - ./config/vhosts:/etc/apache2/sites-enabled
 ```
 
-**Note:** this example is for _www.drupal8.local_ site.
+**Note:** this example is for _www.newname.local_ site.
 
 ```bash
 #!bash
 
-cp config/vhosts/example.conf.example config/vhosts/drupal8.conf
-sed -i 's/example/drupal8/' config/vhosts/drupal8.conf
+cp config/vhosts/example.conf.example config/vhosts/newsite.conf
+sed -i 's/example/newsite/' config/vhosts/newsite.conf
 ```
 
 _NOTE: review your project path._
@@ -184,9 +150,8 @@ _NOTE: review your project path._
 Add to _/etc/hosts_ new site _name_:
 
 ```bash
-echo "127.0.0.1 drupal8.local www.drupa8.local" >> /etc/hosts
+echo "127.0.0.1 newsite.local www.newsite.local" >> /etc/hosts
 ```
-
 
 And reload system:
 
@@ -199,9 +164,9 @@ $ docker-compose up -d
 
 Use some setup by default. You can (un)comment to change behaviour.
 
-You can see **two _php.ini_ templates** with different setup, [development](https://github.com/keopx/docker-lamp/blob/master/config/php/php.ini-development) and [production](https://github.com/keopx/docker-lamp/blob/master/config/php/php.ini-production) setup.
+You can see **two _php.ini_ templates** with different setup, development and production setup.
 
-In addition, you can check **apcu**, **opcache**, **xdebug** and **xhprof** configuration, the same file for php 7.1, 7.0 and 5.6, and  **opcache** recomended file version for [Drupal](https://wwww.drupal.org).
+In addition, you can check **apcu**, **opcache**, **xdebug** and **xhprof** configuration, the same file for php 7.1, 7.0 and 5.6, and  **opcache** recomended file version.
 
 ##### PHP 5.6
 
@@ -302,7 +267,7 @@ Use to connect to MySQl **mysql** instead *localhost*.
 ```
 #### Custom my.cnf
 
-You can check [my.cnf](https://github.com/keopx/docker-lamp/blob/master/config/mysql/my.cnf) and change you need variables.
+You can check my.cnf in ./config/mysql/my.cnf and change you need variables.
 
 ```yml
       ## Custom setup for MySQL
@@ -319,9 +284,9 @@ You can check [my.cnf](https://github.com/keopx/docker-lamp/blob/master/config/m
 ```yml
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=drupal
-      - MYSQL_USER=drupaluser
-      - MYSQL_PASSWORD=drupalpass
+      - MYSQL_DATABASE=
+      - MYSQL_USER=
+      - MYSQL_PASSWORD=
 ```
 
 ### Redis
