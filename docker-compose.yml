@@ -11,10 +11,10 @@ services:
       # - ./config/varnish/drupal-template.vcl:/etc/varnish/default.vcl
       ## Niteman file: https://github.com/NITEMAN/varnish-bites/blob/master/varnish4/drupal-base.vcl
       # - ./config/varnish/drupal-base.vcl:/etc/varnish/default.vcl
-    environment:
+    #environment:
       # - VARNISH_PORT=80
       # - VARNISH_MEMORY=500M
-      # Next values only works with default default.vcl file. Not use with -v ./config/varnish/default.vcl:/etc/varnish/default.vcl
+      ## Next values only works with default default.vcl file. Not use with -v ./config/varnish/default.vcl:/etc/varnish/default.vcl
       #- VARNISH_BACKEND_IP=apache-php
       #- VARNISH_BACKEND_PORT=80
     links:
