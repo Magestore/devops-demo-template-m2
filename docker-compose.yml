@@ -56,8 +56,7 @@ services:
       - ./data/www:/var/www
       - ./config/vhosts:/etc/apache2/sites-enabled
       ## php.ini for php 5.6
-      - ./config/php/5.6:/etc/php/5.6/cli
-      - ./config/php/5.6/php.ini:/etc/php/5.6/cli/php.ini
+      #- ./config/php/5.6/php.ini:/etc/php/5.6/cli/php.ini
       ## php.ini for php 7.x and remove environment varibles.
       #- ./config/php/7.0/php.ini:/etc/php/7.0/apache2/php.ini
       ## Opcache for php 7.0
