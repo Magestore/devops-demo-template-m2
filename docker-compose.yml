@@ -91,7 +91,8 @@ services:
       #- ./config/mysql/my.cnf:/etc/mysql/my.cnf
     environment:
       #- MYSQL_RANDOM_ROOT_PASSWORD=yes
-      - MYSQL_ROOT_PASSWORD=
+      ## change these infomations
+      - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=
       - MYSQL_USER=
       - MYSQL_PASSWORD=
