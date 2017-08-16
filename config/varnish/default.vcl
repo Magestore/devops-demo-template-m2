@@ -14,8 +14,8 @@ vcl 4.0;
 
 # Default backend definition. Set this to point to your content server.
 backend default {
-    .host = "web";
-    .port = "80";
+    .host = "${VARNISH_BACKEND_IP}";
+    .port = "${VARNISH_BACKEND_PORT}";
 }
 
 sub vcl_recv {
