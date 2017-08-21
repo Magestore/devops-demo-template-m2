@@ -38,8 +38,8 @@ The [Drupal](https://wwww.drupal.org) bundle consist of the following containers
 | [Varnish](#varnish) | 5.1 | varnish | <a href="https://hub.docker.com/r/thinlt/varnish/" target="_blank">thinlt/varnish</a> | 80 | ✓ |
 | [Nginx](https://hub.docker.com/_/nginx/) | latest | proxy | nginx | 443 | ✓ |
 | [Apache PHP](#apache-php) | 7.2/5.6 | apache-php | <a href="https://hub.docker.com/r/thinlt/apache-php/" target="_blank">thinlt/apache-php</a> | 8008 | ✓ |
-| [MySQL](#mysql) | 5.6 | mysql | <a href="https://hub.docker.com/r/thinlt/mysql/" target="_blank">keopx/mysql</a> | 3306 | ✓ |
-| [Redis](#redis) | 3.2 | redis | <a href="https://hub.docker.com/r/thinlt/redis/" target="_blank">keopx/redis</a> | 6379 | ✓ |
+| [MySQL](#mysql) | 5.6 | mysql | <a href="https://hub.docker.com/r/thinlt/mysql/" target="_blank">thinlt/mysql</a> | 3306 | ✓ |
+| [Redis](#redis) | 3.2 | redis | <a href="https://hub.docker.com/r/thinlt/redis/" target="_blank">thinlt/redis</a> | 6379 | ✓ |
 | [phpMyAdmin](#phpmyadmin) | | phpmyadmin | <a href="https://hub.docker.com/r/phpmyadmin/phpmyadmin" target="_blank">phpmyadmin/phpmyadmin</a> |  8080 | ✓ |
 | [Mailhog](#mailhog) | | mailhog | <a href="https://hub.docker.com/r/mailhog/mailhog" target="_blank">mailhog/mailhog</a> | 8025 - 1025 | ✓ |
 
