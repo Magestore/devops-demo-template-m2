@@ -18,6 +18,11 @@ backend default {
     .port = "80";
 }
 
+backend insecure {
+    .host = "apache-php";
+    .port = "443";
+}
+
 sub vcl_recv {
     # Happens before we check if we have this in cache already.
     # 
