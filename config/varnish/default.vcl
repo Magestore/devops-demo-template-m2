@@ -18,21 +18,20 @@ backend default {
     .port = "80";
 }
 
-#backend insecure {
-#    .host = "apache-php";
-#    .port = "443";
-#}
+backend port_ssl {
+    .host = "apache-php";
+    .port = "443";
+}
 
 sub vcl_recv {
     # Happens before we check if we have this in cache already.
     # 
     # Typically you clean up the request here, removing cookies you don't need,
     # rewriting the request, etc.
-    #if ( req.http.X-Forwarded-Proto == 'https' ) {
-    #    #set req.http.host = "backend.example1.com";
-    #    set req.backend = insecure;
-    #    return (lookup);
-    #}
+    if ( req.http.X-Forwarded-Proto == 'https' ) {
+        set req.backend_hint = port_ssl;
+        return (lookup);
+    }
 }
 
 sub vcl_backend_response {
