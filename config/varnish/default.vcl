@@ -28,7 +28,7 @@ sub vcl_recv {
     # 
     # Typically you clean up the request here, removing cookies you don't need,
     # rewriting the request, etc.
-    if ( req.http.X-Forwarded-Proto == 'https' ) {
+    if ( req.http.X-Forwarded-Proto == "https" ) {
         set req.backend_hint = port_ssl;
         return (lookup);
     }
