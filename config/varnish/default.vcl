@@ -30,7 +30,7 @@ sub vcl_recv {
     # rewriting the request, etc.
     if ( req.http.X-Forwarded-Proto == "https" ) {
         set req.backend_hint = port_ssl;
-        #return (lookup);
+        return (pass);
     }
 }
 
