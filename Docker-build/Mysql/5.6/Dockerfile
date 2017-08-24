@@ -28,6 +28,8 @@ RUN rpmkeys --import https://repo.mysql.com/RPM-GPG-KEY-mysql \
 
 VOLUME /var/lib/mysql
 
+RUN chown -R mysql:mysql /var/lib/mysql
+
 COPY docker-entrypoint-initdb-import/* /docker-entrypoint-initdb-import/
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
