@@ -8,7 +8,7 @@ if [ $HAS_CHANGED -gt 0 ]; then
   git add -A
   git commit -m "add from system"
   git pull
-  git push
+  git push origin master
 else
   git pull
 fi
