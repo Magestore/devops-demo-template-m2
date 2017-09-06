@@ -13,9 +13,8 @@ Includes the following components:
 * MariaDB 10.0
 * Postfix 2.11
 * PHP 7
- 
 * PHP modules
-    	* php-bz2
+	* php-bz2
 	* php-cgi
 	* php-cli
 	* php-common
