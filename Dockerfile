@@ -43,14 +43,11 @@ RUN apt-get install -y \
 	php7.0-tidy \
 	php7.0-xmlrpc \
 	php7.0-xsl
-RUN echo "Debug install apache2"
-RUN apt-get install apache2 libapache2-mod-php7.0 -y
-RUN apt-get install mariadb-common mariadb-server mariadb-client -y
-RUN echo "Debug install postfix"
-RUN apt-get install postfix -y
-RUN echo "Debug install git"
-RUN apt-get install git nodejs npm composer nano tree vim curl ftp -y
-RUN echo "Debug install gulp"
+
+RUN apt-get install -y apache2 libapache2-mod-php7.0
+RUN apt-get install -y mariadb-common mariadb-server mariadb-client
+RUN apt-get install -y postfix
+RUN apt-get install -y git nodejs npm composer nano tree vim curl ftp
 RUN npm install -g bower grunt-cli gulp
 
 ENV LOG_STDOUT **Boolean**
