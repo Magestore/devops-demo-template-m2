@@ -46,7 +46,7 @@ RUN apt-get install -y \
 
 RUN apt-get install -y apache2 libapache2-mod-php7.0
 RUN apt-get install -y mariadb-common mariadb-server mariadb-client
-RUN apt-get install -y postfix
+#RUN apt-get install -y postfix
 RUN apt-get install -y git nodejs npm composer nano tree vim curl ftp
 RUN npm install -g bower grunt-cli gulp
 
