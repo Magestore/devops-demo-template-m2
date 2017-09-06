@@ -129,6 +129,12 @@ The user and group owner id for the MariaDB directory `/var/log/mysql` are 105 a
 Use cases
 ----
 
+#### Run service live:
+
+```
+docker run -itd -p 80:80 -p 443:443 -p 3306:3306 -v $(pwd)/data/www:/var/www/html -v $(pwd)/data/mysql:/var/lib/mysql thinlt/lamp
+```
+
 #### Create a temporary container for testing purposes:
 
 ```
