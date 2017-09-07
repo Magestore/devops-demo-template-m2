@@ -1,7 +1,4 @@
 
-thinlt/lamp
-===========
-
 This Docker container implements a last generation LAMP stack with a set of popular PHP modules. Includes support for [Composer](https://getcomposer.org/), [Bower](http://bower.io/) and [npm](https://www.npmjs.com/) package managers and a Postfix service to allow sending emails through PHP [mail()](http://php.net/manual/en/function.mail.php) function.
 
 If you dont need support for MySQL/MariaDB, or your app runs on PHP 5.4, maybe [fauria/lap](https://hub.docker.com/r/fauria/lamp) suits your needs better.
@@ -159,3 +156,6 @@ docker run -d --link my-mysql-container:mysql -p 8080:80 -v /my/data/directory:/
 docker exec -i -t my-lamp-container bash
 mysql -u root
 ```
+=======
+# devops-demo-m2-starter
+
