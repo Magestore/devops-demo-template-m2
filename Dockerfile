@@ -1,15 +1,14 @@
-FROM ubuntu:16.04
+FROM debian:9
+
 MAINTAINER Robert <mrthinlt@gmail.com>
+
 LABEL Description="Cutting-edge LAMP stack, based on Ubuntu 16.04 LTS. Includes .htaccess support and popular PHP7 features, including composer and mail() function." \
 	License="Apache License 2.0" \
-	Usage="docker run -d -p [HOST WWW PORT NUMBER]:80 -p [HOST DB PORT NUMBER]:3306 -v [HOST WWW DOCUMENT ROOT]:/var/www/html -v [HOST DB DOCUMENT ROOT]:/var/lib/mysql fauria/lamp" \
+	Usage="docker run -d -p [HOST WWW PORT NUMBER]:80 -p [HOST WWW SECURE PORT NUMBER]:443 -p [HOST DB PORT NUMBER]:3306 -v [HOST WWW DOCUMENT ROOT]:/var/www/html -v [HOST DB DOCUMENT ROOT]:/var/lib/mysql fauria/lamp" \
 	Version="1.0"
 
 RUN apt-get update
 RUN apt-get upgrade -y
-
-COPY debconf.selections /tmp/
-#RUN debconf-set-selections /tmp/debconf.selections
 
 RUN apt-get install -y \
 	php7.0 \
@@ -46,9 +45,7 @@ RUN apt-get install -y \
 
 RUN apt-get install -y apache2 libapache2-mod-php7.0
 RUN apt-get install -y mariadb-common mariadb-server mariadb-client
-#RUN apt-get install -y postfix
-RUN apt-get install -y git nodejs npm composer nano tree vim curl ftp
-RUN npm install -g bower grunt-cli gulp
+RUN apt-get install -y git vim nodejs npm composer curl
 
 ENV LOG_STDOUT **Boolean**
 ENV LOG_STDERR **Boolean**
