@@ -62,6 +62,7 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN chmod +x /usr/sbin/run-lamp.sh
 RUN chown -R www-data:www-data /var/www/html
 
+VOLUME /etc/apache2
 VOLUME /var/www/html
 VOLUME /var/log/httpd
 VOLUME /var/lib/mysql
