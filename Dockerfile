@@ -45,7 +45,7 @@ RUN apt-get install -y \
 
 RUN apt-get install -y apache2 libapache2-mod-php7.0
 RUN apt-get install -y mariadb-common mariadb-server mariadb-client
-RUN apt-get install -y git vim nodejs npm composer curl
+RUN apt-get install -y git vim composer curl
 
 ENV LOG_STDOUT **Boolean**
 ENV LOG_STDERR **Boolean**
