@@ -1,0 +1,34 @@
+
+<!--
+  ~ * Copyright © 2016 Magestore. All rights reserved.
+  ~ * See COPYING.txt for license details.
+  ~
+  -->
+
+<div id="popup-make-adjustment" class="hide-popup popup-for-right">
+    <div class="wrap-popup">
+        <div class="popup-header">
+            <button type="button" class="button cancel" data-bind="click: closeForm"><span data-bind="i18n:'Cancel'"/></button>
+            <label class="title-box"><span data-bind="i18n:'Make adjustment'"/></label>
+            <button type="button" class="button btn-done" data-bind="click: createCashAdjustment"><span class="link-cl-cfg" data-bind="i18n:'Done'"/></button>
+        </div>
+        <div class="modal-body">
+            <label class="cash-drawer"><span data-bind="i18n:'The current balance of your shift'"/>: <b><span data-bind="text: balanceFormatted"/></b></label>
+            <div class="actions">
+                <button type="button" class="cash_adjustment_active" data-bind="click: addCash, attr:{'class': add_cash_class}"><span data-bind="i18n:'Add'"/></button>
+                <button type="button" class="cash_adjustment_inactive" data-bind="click: removeCash, attr:{'class': remove_cash_class}"><span data-bind="i18n:'Remove'"/></button>
+            </div>
+            <div class="amount-box">
+                <div class="input-box">
+                    <label><span data-bind="i18n:'Amount'"/></label>
+                    <input type="text" data-bind="textInput: valueFormatted, event:{change: valueChange}"  onfocus="this.select()">
+                </div>
+                <div>
+                    <span class="error_message" data-bind="text: valueErrorMessage"/>
+                </div>
+                <textarea class="note" placeholder="Note" data-bind="value: note"></textarea>
+            </div>
+            <div class="staff-name"><span data-bind="text:staffName"/> </div>
+        </div>
+    </div>
+</div>

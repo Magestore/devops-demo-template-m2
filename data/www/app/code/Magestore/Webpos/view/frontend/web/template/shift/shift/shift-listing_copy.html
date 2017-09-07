@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--
+  ~ * Copyright © 2016 Magestore. All rights reserved.
+  ~ * See COPYING.txt for license details.
+  ~
+  -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Magestore Webpos</title>
+    <meta name="description" content="Some slide and push menu demos using CSS3 transitions.">
+    <link rel="stylesheet" href="skin/css/style.css">
+    <link rel="stylesheet" href="skin/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="skin/css/bootstrap/bootstrap-theme.css">
+    <link rel="stylesheet" href="skin/css/bootstrap/bootstrap-switch.css">
+    <link rel="stylesheet" href="skin/css/owl.carousel.css">
+    <link rel="stylesheet" href="skin/css/owl.transitions.css">
+    <link rel="stylesheet" href="skin/css/general.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="ms-webpos">
+    <button id="c-button--push-left" class="c-button" style="display: block;"><span class="icon-iconPOS-menu"></span>
+    </button>
+    <div id="o-wrapper" class="o-wrapper wrap-checkout-page">
+        <div id="shift_container" class="pos_container">
+            <div class="wrap-shift_container">
+                <!-- Template for right column -->
+                <div class="col-sm-4 col-lg-3 col-right">
+                    <header class="o-header">
+                        <nav class="o-header-nav">
+                            <span></span>
+                            <label class="title">Register shift</label>
+                            <div class="icon-add" data-toggle="modal" data-target="#form-add-customer">
+                                <span class="icon-iconPOS-add"></span>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <div class="main-item-shift main-shift">
+                        <div class="wrap-item-shift">
+                            <div class="title-time time-one">This week</div>
+                            <ul class="list-shifts">
+                                <li class="shift-item">
+                                    <div class="item">
+                                        <div class="date-time">
+                                            <span class="day-month">May 25</span>
+                                            <span class="type">11:23 AM</span> - <span class="btn-open-shift">Open</span>
+                                        </div>
+                                        <div class="price-date">
+                                            <span class="price">$444.000</span>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="shift-item selected">
+                                    <div class="item">
+                                        <div class="date-time">
+                                            <span class="day-month">May 25</span>
+                                            <span class="type">11:23 AM - 07:00 PM</span>
+                                        </div>
+                                        <div class="price-date">
+                                            <span class="price">$444.000</span>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="shift-item">
+                                    <div class="item">
+                                        <div class="date-time">
+                                            <span class="day-month">May 25</span>
+                                            <span class="type">11:23 AM - 07:00 PM</span>
+                                        </div>
+                                        <div class="price-date">
+                                            <span class="price">$444.000</span>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="shift-item">
+                                    <div class="item">
+                                        <div class="date-time">
+                                            <span class="day-month">May 25</span>
+                                            <span class="type">11:23 AM - 07:00 PM</span>
+                                        </div>
+                                        <div class="price-date">
+                                            <span class="price">$444.000</span>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="shift-item">
+                                    <div class="item">
+                                        <div class="date-time">
+                                            <span class="day-month">May 25</span>
+                                            <span class="type">11:23 AM - 07:00 PM</span>
+                                        </div>
+                                        <div class="price-date">
+                                            <span class="price">$444.000</span>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- End Template for right column -->
+
+                <div class="col-sm-8 col-lg-9 col-left">
+                    <header class="o-header">
+                        <nav class="o-header-nav">
+                            <div class="detail-datetime">May 25, 2016</div>
+                        </nav>
+                        <div class="sum-info-top">
+                            <div class="life-time-left">
+                                <label>Total Sales: </label><span class="price">$999.000</span>
+                            </div>
+                            <div class="view-detail">
+                                <label class="action-view-details" data-toggle="collapse"
+                                       data-target="#shift-detail-sale">View
+                                    details <!--<span class="icon-iconPOS-add"></span>--></label>
+                            </div>
+                        </div>
+                        <div id="shift-detail-sale" class="collapse">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Sale</th>
+                                    <th>Refunds</th>
+                                    <th>Net</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="a-left">
+                                        <div class="credit-card-payment">
+                                            <div class="icon-payment cash"><span
+                                                    class="icon-icon-iconPOS-payment-codforpos"></span></div>
+                                            <label>Credit Card</label>
+                                        </div>
+                                    </td>
+                                    <td>$0.00</td>
+                                    <td>$78.00</td>
+                                    <td>$78.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="a-left">
+                                        <div class="credit-card-payment cashforpos">
+                                            <div class="icon-payment"><span
+                                                    class="icon-icon-iconPOS-payment-cashforpos"></span></div>
+                                            <label>Credit Card</label>
+                                        </div>
+                                    </td>
+                                    <td>$0.00</td>
+                                    <td>$78.00</td>
+                                    <td>$78.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="a-left">
+                                        <div class="credit-card-payment defaultforpos">
+                                            <div class="icon-payment"><span
+                                                    class="icon-icon-iconPOS-payment-defaultforpos"></span></div>
+                                            <label>Credit Card</label>
+                                        </div>
+                                    </td>
+                                    <td>$0.00</td>
+                                    <td>$78.00</td>
+                                    <td>$78.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="a-left">
+                                        <div class="credit-card-payment ccforpos">
+                                            <div class="icon-payment"><span
+                                                    class="icon-icon-iconPOS-payment-ccforpos"></span></div>
+                                            <label>Credit Card</label>
+                                        </div>
+                                    </td>
+                                    <td>$0.00</td>
+                                    <td>$78.00</td>
+                                    <td>$78.00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="a-left">
+                                        <div class="credit-card-payment cp2forpos">
+                                            <div class="icon-payment"><span
+                                                    class="icon-icon-iconPOS-payment-cp2forpos"></span></div>
+                                            <label>Credit Card</label>
+                                        </div>
+                                    </td>
+                                    <td>$0.00</td>
+                                    <td>$78.00</td>
+                                    <td>$78.00</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="a-left">
+                                        <div class="credit-card-payment cp1forpos">
+                                            <div class="icon-payment"><span
+                                                    class="icon-icon-iconPOS-payment-cp1forpos"></span></div>
+                                            <label>Credit Card</label>
+                                        </div>
+                                    </td>
+                                    <td>$0.00</td>
+                                    <td>$78.00</td>
+                                    <td>$78.00</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </header><!-- /o-header -->
+
+
+                    <main class="main-content">
+                        <h2 class="title-box">Activities</h2>
+                        <table class=" table table-activities">
+                            <tbody>
+                            <tr>
+                                <td>Open Shift</td>
+                                <td>
+                                    <h3 class="staff-name">Johny</h3>
+                                    <label class="date-time">Jun 05, 2016, 11:23 AM</label>
+                                </td>
+                                <td>
+                                    <label class="balance-float">Balance</label>
+                                    <span class="price">$11.90</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Open Shift</td>
+                                <td>
+                                    <h3 class="staff-name">Johny</h3>
+                                    <label class="date-time">Jun 05, 2016, 11:23 AM</label>
+                                </td>
+                                <td>
+                                    <label class="balance-float">Balance</label>
+                                    <span class="price">$11.90</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Open Shift</td>
+                                <td>
+                                    <h3 class="staff-name">Johny</h3>
+                                    <label class="date-time">Jun 05, 2016, 11:23 AM</label>
+                                </td>
+                                <td>
+                                    <label class="balance-float">Balance</label>
+                                    <span class="price">$11.90</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Open Shift</td>
+                                <td>
+                                    <h3 class="staff-name">Johny</h3>
+                                    <label class="date-time">Jun 05, 2016, 11:23 AM</label>
+                                </td>
+                                <td>
+                                    <label class="balance-float">Balance</label>
+                                    <span class="price">$11.90</span>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </main><!-- /o-content -->
+                    <footer class="footer-shift">
+                        <div class="action-button">
+                            <button class="button btn-make-adjustment">Make Adjustment</button>
+                            <button class="button btn-close-shift">Close Shift</button>
+                        </div>
+                    </footer>
+
+                </div>
+
+
+                <div id="popup-open-shift" class="hide-popup popup-for-right">
+                    <div class="wrap-popup">
+                        <div class="popup-header">
+                            <button type="button" class="button cancel">Cancel</button>
+                            <label class="title-box">Open shift</label>
+                            <button type="submit" class="button btn-done">Done</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="amount-box">
+                                <div class="input-box">
+                                    <label>Float amount</label>
+                                    <input type="text" value="444">
+                                </div>
+
+                                <textarea class="note" placeholder="Note"></textarea>
+                            </div>
+                            <div class="staff-name">Steve Ngo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-backover hide-popup"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Template for Menu Left -->
+    <nav id="c-menu--push-left" class="c-menu c-menu--push-left">
+        <button class="c-menu__close">&larr; Close Menu</button>
+        <label class="store-name">Magestore</label>
+
+        <ul class="c-menu__items">
+            <li class="title">Order</li>
+            <li class="c-menu__item"><span class="icon-iconPOS-checkout"></span><a href="#" class="c-menu__link">Checkout</a>
+            </li>
+            <li class="c-menu__item"><span class="icon-iconPOS-on-hold-order"></span><a href="#" class="c-menu__link">On-hold
+                Orders</a></li>
+            <li class="c-menu__item"><span class="icon-iconPOS-order-history"></span> <a href="#" class="c-menu__link">Orders
+                History</a></li>
+        </ul>
+        <ul class="c-menu__items">
+            <li class="title">Register Shifts</li>
+            <li class="c-menu__item"><span class="icon-iconPOS-shift"></span> <a href="#" class="c-menu__link">Register
+                Shifts</a></li>
+        </ul>
+        <ul class="c-menu__items">
+            <li class="title">Customers</li>
+            <li class="c-menu__item"><span class="icon-iconPOS-customer-list"></span> <a href="#" class="c-menu__link">Customer
+                List</a></li>
+        </ul>
+        <ul class="c-menu__items">
+            <li class="title">Inventory</li>
+            <li class="c-menu__item"><span class="icon-iconPOS-inventory"></span><a href="#" class="c-menu__link">Manage
+                Stocks</a></li>
+        </ul>
+        <ul class="c-menu__items">
+            <li class="title">Setting</li>
+            <li class="c-menu__item"><span class="icon-iconPOS-setting"></span><a href="#"
+                                                                                  class="c-menu__link">General</a>
+            </li>
+            <li class="c-menu__item"><span class="icon-iconPOS-cashdrawer"></span> <a href="#" class="c-menu__link">Open
+                Cash Drawer</a></li>
+            <li class="c-menu__item"><span class="icon-iconPOS-synchronize"></span><a href="#" class="c-menu__link">Synchronization</a>
+            </li>
+            <li class="c-menu__item"><span class="icon-iconPOS-account"></span><a href="#" class="c-menu__link">My
+                Account</a></li>
+        </ul>
+
+    </nav><!-- /c-menu push-left -->
+    <div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+    <!-- End Template for Menu Left -->
+</div>
+
+<!--<div class="wrap-backover hide-popup"></div>-->
+<!-- End Popup Add New Customer -->
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/bootstrap/bootstrap.js"></script>
+<script src="js/bootstrap/bootstrap-switch.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/general.js"></script>
+</body>
+</html>

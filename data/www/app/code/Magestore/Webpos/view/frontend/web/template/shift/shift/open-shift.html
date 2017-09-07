@@ -1,0 +1,27 @@
+<!--
+  ~ * Copyright © 2016 Magestore. All rights reserved.
+  ~ * See COPYING.txt for license details.
+  ~
+  -->
+
+<div id="popup-open-shift" class="hide-popup popup-for-right">
+    <div class="wrap-popup">
+        <div class="popup-header">
+            <button type="button" class="button cancel" data-bind="click: closeForm"><span data-bind="i18n:'Cancel'"/></button>
+            <label class="title-box"><span data-bind="i18n:'Open shift'"/></label>
+            <button type="submit" class="button btn-done"  data-bind="click: OpenNewShift"><span class="link-cl-cfg" data-bind="i18n:'Done'"/></button>
+        </div>
+        <div class="modal-body">
+            <div class="amount-box">
+                <div class="input-box">
+                    <label><span data-bind="i18n:'Float amount'"/></label>
+                    <input type="text" data-bind="textInput: floatAmountFormatted, event:{change: floatAmountChange}" onfocus="this.select()">
+                </div>
+
+                <textarea class="note" placeholder="Note" data-bind="value: opened_note"></textarea>
+            </div>
+            <div class="staff-name"><span data-bind="text:staffName"/> </div>
+
+        </div>
+    </div>
+</div>

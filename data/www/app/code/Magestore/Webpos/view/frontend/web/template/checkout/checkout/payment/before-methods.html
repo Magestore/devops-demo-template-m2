@@ -1,0 +1,11 @@
+<!-- ko if: hasChilds() -->
+<div class="panel panel-default before-payment-method-container">
+    <div class="panel-collapse collapse in" aria-expanded="true">
+        <div class="panel-body before-payment-method">
+            <!-- ko foreach: elems() -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+    </div>
+</div>
+<!-- /ko -->

@@ -1,0 +1,39 @@
+<div class="ms-webpos">
+    <div class="login-screen">
+
+        <div class="wrap-login-form">
+            <form class="form-login" role="form" id="webpos-login" method="post">
+                <h1 class="title-page"><img src="<?php echo $block->getLogoUrl();?>" width="200px" height="200px" alt="logo"/></h1>
+                <div class="form-group wrap-input">
+                    <div class="input-box"><input type="text" class="form-control required-entry required" id="username" name="username" placeholder="Username"></div>
+                    <div class="input-box"><input type="password" class="form-control required-entry required" id="pwd"
+                           name="password" placeholder="Password"></div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default"><?php echo __('Login');?></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    window.webposConfig = <?php /* @escapeNotVerified */ echo \Zend_Json::encode($block->getWebposConfig()); ?>;
+</script>
+
+<script>
+    require(
+        [
+            'mage/url',
+        ], function (url) {
+            return url.setBaseUrl('<?php /* @escapeNotVerified */ echo $block->getBaseUrl();?>');
+        });
+</script>
+
+<script>
+    require([
+        'jquery',
+        'Magestore_Webpos/js/login'
+    ], function ($) {
+        $('#webpos-login').webposLogin();
+    })
+</script>

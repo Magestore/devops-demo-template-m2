@@ -1,0 +1,51 @@
+<!--
+  ~ * Copyright © 2016 Magestore. All rights reserved.
+  ~ * See COPYING.txt for license details.
+  ~
+  -->
+
+<div class="notify-notsync" data-bind="visible:isNotSync">This was an issue syncing this shift with your admin</div>
+
+<div class="sum-info-top">
+    <div class="life-time-left">
+        <span class="price" data-bind="text: formatPrice(shiftData().total_sales)"></span>
+    </div>
+    <div class="shift-note">
+        <div class="openend-note"><span data-bind="text: shiftData().opened_note"/> </div>
+        <div class="closed-note"><span data-bind="text: shiftData().closed_note"/> </div>
+    </div>
+</div>
+<div id="shift-detail-sale" data-bind="visible: hasData">
+    <table class="table">
+        <thead>
+        <tr>
+            <th></th>
+            <th><span data-bind="i18n:'Sale'"/></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <!-- html for one item of sale summary -->
+
+        <!-- ko foreach: items -->
+
+        <tr>
+
+            <td class="a-left">
+                <div class="credit-card-payment">
+                    <div class="icon-payment cash"><span data-bind="attr:{'class': $parent.generatePaymentCode(payment_method)}"></span></div>
+                    <label data-bind="text: method_title"/>
+                </div>
+
+            </td>
+            <td><span data-bind="text: $parent.formatPrice(payment_amount)"/></td>
+
+        </tr>
+        <!-- /ko -->
+
+        <!-- end of html for one item of sale summary -->
+
+        </tbody>
+    </table>
+</div>
+

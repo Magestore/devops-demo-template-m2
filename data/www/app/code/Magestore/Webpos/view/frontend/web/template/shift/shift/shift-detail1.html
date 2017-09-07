@@ -1,0 +1,53 @@
+<!--
+  ~ * Copyright © 2016 Magestore. All rights reserved.
+  ~ * See COPYING.txt for license details.
+  ~
+  -->
+
+<div class="col-sm-8 col-left">
+    <header class="o-header">
+        <nav class="o-header-nav">
+            <div class="detail-datetime"><span data-bind="text: shiftOpenedAt"/> </div>
+        </nav>
+    </header>
+        <!-- start html content for sales summary -->
+
+            <!-- ko foreach: getRegion('sales-summary') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+
+        <!-- end html content for sales summary -->
+
+
+
+        <!-- start html content for cash transaction activity -->
+
+            <!-- ko foreach: getRegion('cash-activity') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+
+        <!-- start html content for cash transaction activity -->
+
+        <footer class="footer-shift">
+            <div class="action-button">
+                <button class="button btn-make-adjustment"  data-bind="visible: isClosedShift()==false, afterRender:afterRenderCashAdjustmentButton">Make Adjustment</button>
+                <button class="button btn-close-shift" data-bind="visible: isClosedShift()==false, afterRender:afterRenderCloseButton">Close Shift</button>
+                <button class="button btn-z-report" data-bind="visible: isClosedShift()==true">Print z-report</button>
+            </div>
+        </footer>
+
+    <div class="wrap-backover hide-popup"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

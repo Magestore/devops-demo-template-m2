@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="webpos_paypal_integration">
+        <job name="webpos_paypal_integration_update_order_payment_info" instance="Magestore\WebposPaypal\Cron\UpdateOrderPaymentInfo" method="execute">
+            <schedule>* * * * *</schedule>
+        </job>
+    </group>
+</config>
