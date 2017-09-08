@@ -1,12 +1,15 @@
 version: '2'
 services:
-  web:
+  starter-m2:
     # thinlt/apache-php available tags: latest, 7.2, 5.6.
-    image: thinlt/lamp:1.0
+    image: thinlt/omnichannel_magento2
+    container_name: starter_m2
     ports:
-      - "80:80"
-      - "443:443"
+    - "81:80"
+    - "4431:443"
+    #  - "3306:3306"
     volumes:
       ## Data.
       - ./data/www:/var/www/html
       - ./data/mysql:/var/lib/mysql
+      - ./config/apache2:/etc/apache2
