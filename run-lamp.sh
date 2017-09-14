@@ -53,6 +53,7 @@ else
 fi
 
 # Run sshd
+service ssh start
 &>/dev/null /usr/sbin/sshd -D
 
 # Set PHP timezone
