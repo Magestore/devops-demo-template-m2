@@ -17,6 +17,7 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 # SSH Authorization for python_api container
+RUN mkdir -p /root/.ssh
 RUN echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMMp+x3Rt5CP9Ongx2Nqej28qtv5z18SgtB823TsvViRYAhwJ6rLUZrYASyc33vAeOu+HdXrFG8o91uPqJJ+He7vI1kR73qEFIkkBnrMCQnkTxv61uYeG8Rz/jFSYLrPAgsUScELLap0wX65/mHcHzhuljU6hItWCqbpXHed1da4poU5mPSkwPSZ7i+RZ8TZbCe0ynJQsU4yOP9QzDhRYJUswNwlBa8t9m40LkOzcdLEAjTj2phQfJoe2NKIpL1nTc1rcCymc3xTX8gepovV4HRxHqE6UmOpUlkHAW01RwZiyMJypX5CWKl90WMy/OYLd7BO2AXYc4KIazMAPAzBf1 root@ab5a77d98b45" >> /root/.ssh/authorized_keys
 
 RUN apt-get install -y \
