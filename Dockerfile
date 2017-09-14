@@ -60,6 +60,9 @@ RUN apt-get install -y apache2 libapache2-mod-php7.0
 RUN apt-get install -y mariadb-common mariadb-server mariadb-client
 RUN apt-get install -y git vim composer curl
 
+# set no bind ip mysql
+RUN sed 's@\#\s*bind-address@bind-address@' -i /etc/mysql/mariadb.conf.d/50-server.cnf
+
 ENV LOG_STDOUT **Boolean**
 ENV LOG_STDERR **Boolean**
 ENV LOG_LEVEL warn
