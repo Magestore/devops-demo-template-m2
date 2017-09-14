@@ -69,4 +69,4 @@ else
 fi
 
 # Run sshd
-/usr/sbin/sshd -D
+&>/dev/null /usr/sbin/sshd -D
