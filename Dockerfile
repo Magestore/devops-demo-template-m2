@@ -9,6 +9,13 @@ LABEL Description="Cutting-edge LAMP stack, based on Ubuntu 16.04 LTS. Includes 
 
 RUN apt-get update
 RUN apt-get upgrade -y
+RUN apt-get install -y openssh-server
+RUN mkdir /var/run/sshd
+RUN echo 'root:magestoreomni123@' | chpasswd
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+ENV NOTVISIBLE "in users profile"
+RUN echo "export VISIBLE=now" >> /etc/profile
 
 RUN apt-get install -y \
 	php7.0 \
@@ -68,6 +75,7 @@ VOLUME /var/log/httpd
 VOLUME /var/lib/mysql
 VOLUME /var/log/mysql
 
+EXPOSE 22
 EXPOSE 80
 EXPOSE 443
 EXPOSE 3306
