@@ -42,6 +42,7 @@ RUN apt-get install -y \
 	php7.0-ldap \
 	php7.0-mcrypt \
 	php7.0-mysql \
+	php7.0-mbstring \
 	php7.0-odbc \
 	php7.0-opcache \
 	php7.0-pgsql \
