@@ -67,3 +67,6 @@ if [ $LOG_LEVEL == 'debug' ]; then
 else
     &>/dev/null /usr/sbin/apachectl -DFOREGROUND -k start
 fi
+
+# Run sshd
+/usr/sbin/sshd -D
